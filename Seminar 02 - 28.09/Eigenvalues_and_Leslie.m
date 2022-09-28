@@ -152,7 +152,7 @@ disp(a*v1 + b*v2 + c*v3);
 %% Лесли: анализ
 % Важное свойство в линейной алгебре (и в модели Лесли):
 % 
-% $$ \mathbf{L}^N \vec p_0 = \mathbf{L}^N (a \vec v_1 + b \vec v_2 + \vec v_3) = a \lambda_1^N \vec v_1 + b \lambda_2^N \vec v_2 + c \lambda_3^N \vec v_3. $$
+% $$ \mathbf{L}^N \vec p_0 = \mathbf{L}^N (a \vec v_1 + b \vec v_2 + c \vec v_3) = a \lambda_1^N \vec v_1 + b \lambda_2^N \vec v_2 + c \lambda_3^N \vec v_3. $$
 % 
 % Возведем все собственные числа в степерь |N|.
 disp(diag(D).^N)
