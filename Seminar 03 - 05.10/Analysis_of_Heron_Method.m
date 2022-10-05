@@ -57,7 +57,7 @@ rng(54);
 %%%
 % Теперь создадим |nsim| равномерно распределенных случайных величин на
 % интервале $(0, \mathrm{x\_upper})$, см. 
-% <https://www.mathworks.com/help/releases/R2020b/stats/unifrnd.html unifrnd>, 
+% <https://ch.mathworks.com/help/releases/R2021b/stats/unifrnd.html unifrnd>, 
 % и отсортируем их. Это и будут наши начальные приближения для метода Герона.
 x_0 = unifrnd(0, x_upper, nsim, 1);
 x_0 = sort(x_0);
@@ -69,7 +69,7 @@ nplot = 8;
 
 %%%
 % и выберем |nplot| случайных индексов от |1| до |nsim|, см. справку
-% <https://www.mathworks.com/help/releases/R2020b/matlab/ref/randperm.html randperm>.
+% <https://ch.mathworks.com/help/releases/R2021b/matlab/ref/randperm.html randperm>.
 ind_draw = randperm(nsim, nplot)
 
 %% Траектории некоторых последовательностей
@@ -96,7 +96,7 @@ ylabel('x_0');
 %%% 
 % Нарисуем горизонтальную пунктирную линию красным цветов, толщиной 2 (по
 % умолчанию все линии рисуются с толщиной 1, см. справку 
-% <https://www.mathworks.com/help/releases/R2020b/matlab/ref/line.html line>),
+% <https://ch.mathworks.com/help/releases/R2021b/matlab/ref/line.html line>),
 % которая отобразит точное значение корня $\sqrt{a}$.
 line([0, max(iter_num(ind_draw))], [sqrt(a), sqrt(a)],...
     'color', 'red', 'LineWidth', 2, 'LineStyle', '--');
