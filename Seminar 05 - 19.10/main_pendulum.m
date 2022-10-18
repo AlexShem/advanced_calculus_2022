@@ -4,15 +4,26 @@ L = 1;
 omega = sqrt(g/L);
 
 z_0 = [4*pi/6; -2];
+z_0 = [.1; .1];
 T = 10;
 tspan = linspace(0, T, 101);
 
 [t, z] = ode45(@(t, z) pendulum_system(t, z, omega), tspan, z_0);
 theta = z(:, 1);
 
+%% Approximate solution of d^2(z)/(dt)^2 = -omega^2 * z
+% z(t) = c1*cos(omega*t) + c2*sin(omega*t)
+% dz/dt(t) = -c1*omega*sin(omega*t) + c2*omega*cos(omega*t)
+% z(0) = c1
+% dz/dt(0) = c2*omega
+c1 = z_0(1);
+c2 = z_0(2)/omega;
+
 %%
 figure(1);
 comet(t, theta);
+hold on;
+plot(t, c1*cos(omega*t) + c2*sin(omega*t), '--k')
 
 %%
 x_pos = sin(theta);
