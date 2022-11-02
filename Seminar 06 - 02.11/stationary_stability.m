@@ -5,7 +5,7 @@
 % постоянными коэффициентами
 % 
 % $$\left( \begin{array}{cc} \dot{x} \\ \dot{y} \end{array}\right) = \left(
-% \begin{array}{cc} 1 & 1 \\ 1 & -2 \end{array}\right) \cdot \left( \begin{array}{cc} x \\ y \end{array}\right) $$
+% \begin{array}{cc} -1 & 2 \\ 1 & 0 \end{array}\right) \cdot \left( \begin{array}{cc} x \\ y \end{array}\right) $$
 % 
 % и её стационарную точку $(x, y)' = (0, 0)'$. Найдем собственные числа и
 % собственные вектора матрицы
