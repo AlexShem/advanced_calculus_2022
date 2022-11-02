@@ -10,13 +10,13 @@
 % и её стационарную точку $(x, y)' = (0, 0)'$. Найдем собственные числа и
 % собственные вектора матрицы
 
-A = [1 1; 1 -2];
+A = [-1 2; 1 0];
 [V, D] = eig(A)
 
 %%
 % В таком случае, решение системы есть
 % 
-% $$\left( \begin{array}{cc} x \\ y \end{array}\right) = c_1 \exp^{-2.3028\,t} \left( \begin{array}{cc} -0.2898 \\ 0.9571 \end{array}\right) + c_2 \exp^{1.3028\,t} \left( \begin{array}{cc} -0.9571 \\ -0.2898 \end{array}\right).$$
+% $$\left( \begin{array}{cc} x \\ y \end{array}\right) = c_1 \exp^{-2\,t} \left( \begin{array}{cc} -2 \\ 1 \end{array}\right) + c_2 \exp^{t} \left( \begin{array}{cc} -1 \\ -1 \end{array}\right).$$
 % 
 % Поскольку $\lambda_1 < 0$, то решение со временем убывает вдоль первого
 % собственного вектора $\vec{v}_1$. Аналогично, поскольку $\lambda_2 > 0$,
@@ -74,6 +74,9 @@ dy = -x;
 f2 = figure(2);
 streamslice(x, y, dx, dy);
 axis equal;
+hold on;
+scatter(0, 0, 40, "red", "*")
+hold off;
 
 %% Нелинейная система дифференциальных уравнений
 % Рассмотрим следующую систему дифференциальных уравнений
